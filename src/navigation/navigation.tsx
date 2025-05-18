@@ -11,6 +11,8 @@ import { AddStackScreen, ChatStackScreen, HomeStackScreen, LikeStackScreen, Prof
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AnimatedSymbolScreen from '../screens/Animated';
+import LoginScreen from '../screens/Login';
+import OTPScreen from '../screens/OTP';
 
 
 const Tab = createBottomTabNavigator<RouteStackParamList>();
@@ -23,6 +25,8 @@ const RootNavigation = () => {
         <NavigationContainer>
             <RootStack.Navigator screenOptions={{ headerShown: false }}>
                 <RootStack.Screen name="Splash" component={AnimatedSymbolScreen} />
+                <RootStack.Screen name="Login" component={LoginScreen} />
+                <RootStack.Screen name="OTP" component={OTPScreen} />
                 <RootStack.Screen name="Main" component={MainNavigation} />
             </RootStack.Navigator>
         </NavigationContainer>

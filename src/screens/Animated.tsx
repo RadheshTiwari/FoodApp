@@ -46,7 +46,7 @@ const AnimatedSymbolScreen = () => {
 
             // Navigate to Main after 3 seconds
             setTimeout(() => {
-                navigation.replace('Main');
+                navigation.replace('Login');
             }, 2000);
         });
     }, [navigation]);

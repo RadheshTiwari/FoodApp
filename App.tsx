@@ -1,15 +1,20 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 
 import React, { FC } from 'react';
-// import MainNavigation from './src/navigation/navigation';
+
 import RootNavigation from './src/navigation/navigation';
+import { Platform, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 
 const App: FC = () => {
-  // const ParentComponent: ParentComponent = Platform.OS === commonConstant.ANDROID ? View : SafeAreaView
+  const ParentComponent = Platform.OS === "android" ? View : SafeAreaProvider;
   return (
-    <RootNavigation />
+    <ParentComponent style={{flex:1}}>
+      <RootNavigation />
+      </ParentComponent>
+
   );
 };
 
